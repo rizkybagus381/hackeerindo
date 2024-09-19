@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a1a1a;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .left {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .left h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .left p {
+            margin: 10px 0 20px;
+            color: #666;
+        }
+        .left input[type="text"], .left input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .left button {
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .right {
+            background: url('https://i.pinimg.com/564x/e3/b3/02/e3b3023bda93b899b0e3a34fa6bbcc16.jpg') no-repeat center center;
+            background-size: cover;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>Welcome</h1>
+            <p>We are glad to see you back with us</p>
+            <input id="username" type="text" placeholder="Username">
+            <input id="password" type="password" placeholder="Password">
+            <button onclick="login()">NEXT</button>
+        </div>
+        <div class="right"></div>
+    </div>
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username === "bagus" && password === "1234") {
+                window.location.href = "https://pranx.com/hacker/";
+            } else {
+                alert("Invalid username or password");
+            }
+        }
+    </script>
+</body>
+</html>
